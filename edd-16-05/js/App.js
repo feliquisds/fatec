@@ -1,3 +1,5 @@
+import { Veiculo } from "./Veiculo.js"; 
+
 let carro = [];
 carro.push(["Uno", 0]);
 carro.push(["Gol", 1]);
@@ -12,3 +14,7 @@ let fila_priori = [
 fila_priori.sort((a, b) => b.prioridade - a.prioridade);
 
 console.log(fila_priori);
+
+const a = new Veiculo('teste')
+a.nome = "teste2"
+console.log(a.nome)
