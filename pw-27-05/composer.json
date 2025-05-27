@@ -1,0 +1,15 @@
+{
+    "name": "felix/pw-27-05",
+    "autoload": {
+        "psr-4": {
+            "Felix\\Pw2705\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "feliquisds",
+            "email": "mail@feliquisds.gay"
+        }
+    ],
+    "require": {}
+}
