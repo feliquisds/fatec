@@ -11,7 +11,7 @@
             $this -> aluno = new alunoRepository();
         }
 
-        public function criar($nome, $genero) {
+        public function save($nome, $genero) {
             $aluno = new aluno($nome, $genero);
             $this -> aluno -> save($aluno);
         }
