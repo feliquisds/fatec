@@ -5,7 +5,7 @@
 
     class connection {
         private $host = 'localhost';
-        private $db_name = 'fatec';
+        private $db_name = 'fatecfv';
         private $username = 'root';
         private $password = '';
         public $conn;

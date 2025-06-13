@@ -19,7 +19,11 @@
         }
 
         public function showForm() {
-            include_once __DIR__.'/../../views/aluno/form.php';
+            include_once __DIR__.'/../../public/views/aluno/form.php';
+        }
+
+        public function hello() {
+            echo 'hello world';
         }
     }
 ?>
