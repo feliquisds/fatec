@@ -15,7 +15,25 @@
             echo json_encode(
                 $this->service->save($data->nome, $data->genero)
             );
-            return ['success'=>'Aluno criado'];
+        }
+        
+        public function update($id) {
+            $data = json_decode(file_get_contents("php://input"));
+            echo json_encode(
+                $this->service->update($id, $data->nome, $data->genero)
+            );
+        }
+
+        public function remove($id) {
+            echo json_encode($this->service->remove($id));
+        }
+        
+        public function read($id) {
+            echo json_encode($this->service->read($id));
+        }
+
+        public function list() {
+            echo json_encode($this->service->list());
         }
 
         public function showForm() {

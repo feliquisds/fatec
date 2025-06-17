@@ -16,9 +16,12 @@
         public function save(aluno $aluno) {
             $query = "INSERT INTO aluno (nome, genero) VALUES (:nome, :genero)";
             $stmt = $this -> conn -> prepare($query);
+
+            $nome = $aluno->getNome();
+            $genero = $aluno->getGenero();
             
-            $stmt -> bindParam(":nome", $aluno -> getNome());
-            $stmt -> bindParam(":genero", $aluno -> getGenero());
+            $stmt -> bindParam(":nome", $nome);
+            $stmt -> bindParam(":genero", $genero);
             
             $stmt -> execute();
         }
@@ -41,9 +44,14 @@
         public function update(aluno $aluno) {
             $query = "UPDATE aluno SET nome = :nome, genero = :genero WHERE id = :id";
             $stmt = $this -> conn -> prepare($query);
-            $stmt -> bindParam(":nome", $aluno -> getNome());
-            $stmt -> bindParam(":genero", $aluno -> getGenero());
-            $stmt -> bindParam(":id", $aluno -> getId());
+
+            $nome = $aluno->getNome();
+            $genero = $aluno->getGenero();
+            $id = $aluno->getId();
+            
+            $stmt -> bindParam(":nome", $nome);
+            $stmt -> bindParam(":genero", $genero);
+            $stmt -> bindParam(":id", $id);
             $stmt -> execute();
         }
         
